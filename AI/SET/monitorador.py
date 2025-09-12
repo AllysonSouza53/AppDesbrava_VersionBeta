@@ -7,11 +7,9 @@ def monitorar(verificar,pastavazia):
         pastaatual = ManipulacaoDiretorios.listar_arquivos('AI\\SET')
         if pastavazia != pastaatual:
             p1 = sb.Popen(['python', 'Inicialize.py'])
-            print('foi')
             t.sleep(0.5)
             ManipulacaoArquivos.deletar_arquivo('AI\\SET\\memoria.txt')
         else:
-            print('nao foi')
             t.sleep(0.01)
             continue
 
