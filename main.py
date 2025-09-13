@@ -7,3 +7,4 @@ pasta_vazia = MD.listar_arquivos('AI\\SET')
 
 p1 = sb.Popen(['python', 'front.py'])
 m.monitorar(p1, pasta_vazia)
+

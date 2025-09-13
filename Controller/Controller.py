@@ -1,6 +1,5 @@
 from Models.Aluno import Aluno
 from AI.GET import Getter
-from Models.Cidade import Cidade
 from  Models.Profissional import Profissional
 
 
@@ -16,9 +15,6 @@ class controller:
     def Ordenar(self):
         if self.tabela == 'ALUNOS':
             self.model = Aluno(self.valores, self.condicao,self.rotulos)
-        elif self.tabela == 'CIDADES':
-            self.model = Cidade(self.valores, self.condicao,self.rotulos)
-            self.Acao()
         elif self.tabela == 'ESCOLAS':
             print('ESCOLAS')
         elif self.tabela == 'ESTADOS':

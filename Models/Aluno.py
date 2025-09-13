@@ -1,4 +1,5 @@
 from Banco import Banco
+from Helpers import DadosEndereco
 
 class Aluno(object):
     def __init__(self, valores, condicao,rotulos):
@@ -13,7 +14,8 @@ class Aluno(object):
         self.NumeroCasa = self.valores[3]
         self.Rua = self.valores[4]
         self.Bairro = self.valores[5]
-        self.ID_Cidade = self.valores[6]
+        self.UF = self.valores[12]
+        self.ID_Cidade = DadosEndereco.get_codigo(self.valores[6],self.UF)
         self.CEP = self.valores[7]
         self.Serie = self.valores[8]
         self.Grau = self.valores[9]
@@ -32,24 +34,14 @@ class Aluno(object):
                 self.Serie,
                 self.Grau,
                 self.ID_Escola,
-                self.ID_Profissional]
+                self.ID_Profissional,
+                self.UF]
 
     def Cadastrar(self):
         try:
             Banco.conectar()
-            Banco.inserir('ALUNOS','RE,NOME,DATANASCIMENTO,NUMEROCASA,RUA,BAIRRO,IDCIDADE,CEP,SERIE,GRAU,IDESCOLA,IDPROFISSIONAL',[
-                self.Registro,
-                self.Nome,
-                self.DataNascimento,
-                self.NumeroCasa,
-                self.Rua,
-                self.Bairro,
-                self.ID_Cidade,
-                self.CEP,
-                self.Serie,
-                self.Grau,
-                self.ID_Escola,
-                self.ID_Profissional])
+            Banco.inserir('ALUNOS','RE,NOME,DATANASCIMENTO,NUMEROCASA,RUA,BAIRRO,IDCIDADE,CEP,SERIE,GRAU,IDESCOLA,IDPROFISSIONAL,UF',
+                          self.get())
         except Exception as e:
             print(e)
 
@@ -67,7 +59,8 @@ class Aluno(object):
                                    f",SERIE={self.Serie}"
                                    f",GRAU={self.Grau}"
                                    f",IDESCOLA={self.ID_Escola}"
-                                   f",IDPROFISSIONAL={self.ID_Profissional}"
+                                   f",IDPROFISSIONAL={self.ID_Profissional},"
+                                   f",UF={self.UF}"
                          , self.condicao)
         except Exception as e:
             print(e)

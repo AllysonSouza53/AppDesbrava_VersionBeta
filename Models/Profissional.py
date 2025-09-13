@@ -1,4 +1,5 @@
 from Banco import Banco
+from Helpers import DadosEndereco
 
 class Profissional(object):
     def __init__(self, valores, condicao, rotulos):
@@ -19,8 +20,10 @@ class Profissional(object):
         self.NumeroCasa = self.valores[8]
         self.Rua = self.valores[9]
         self.Bairro = self.valores[10]
-        self.ID_Cidade = self.valores[11]
+        cidade_nome = self.valores[11]
         self.CEP = self.valores[12]
+        self.UF = self.valores[13]
+        self.ID_Cidade = DadosEndereco.get_codigo(cidade_nome, self.UF)
 
     def get(self):
         return [
@@ -36,7 +39,8 @@ class Profissional(object):
             self.Rua,
             self.Bairro,
             self.ID_Cidade,
-            self.CEP
+            self.CEP,
+            self.UF
         ]
 
     def Cadastrar(self):
@@ -44,7 +48,7 @@ class Profissional(object):
             Banco.conectar()
             Banco.inserir(
                 'PROFISSIONAIS',
-                'CPF,NOME,IDPROFISSAO,DATANASCIMENTO,IDESCOLA,SENHA,BIOGRAFIA,IDFAVORITO,NUMEROCASA,RUA,BAIRRO,IDCIDADE,CEP',
+                'CPF,NOME,IDPROFISSAO,DATANASCIMENTO,IDESCOLA,SENHA,BIOGRAFIA,IDFAVORITO,NUMEROCASA,RUA,BAIRRO,IDCIDADE,CEP,UF',
                 self.get()
             )
         except Exception as e:
@@ -67,7 +71,8 @@ class Profissional(object):
                 f"RUA='{self.Rua}',"
                 f"BAIRRO='{self.Bairro}',"
                 f"IDCIDADE={self.ID_Cidade},"
-                f"CEP={self.CEP}",
+                f"CEP={self.CEP},"
+                f"UF='{self.UF}'",
                 self.condicao
             )
         except Exception as e:
@@ -76,7 +81,13 @@ class Profissional(object):
     def Pesquisar(self):
         try:
             Banco.conectar()
-            return Banco.consultar(self.rotulos, 'PROFISSIONAIS', self.condicao)
+            profissional = Banco.consultar(self.rotulos, 'PROFISSIONAIS', self.condicao)
+            linhas = []
+            for i in profissional:
+                linhas.append(','.join(map(str, i)))
+            texto = '\n'.join(linhas)
+            print(texto)
+            return profissional
         except Exception as e:
             print(e)
 
