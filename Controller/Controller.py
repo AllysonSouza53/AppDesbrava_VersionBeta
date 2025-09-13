@@ -17,9 +17,6 @@ class controller:
             self.model = Aluno(self.valores, self.condicao,self.rotulos)
         elif self.tabela == 'CIDADES':
             self.model = Cidade(self.valores, self.condicao,self.rotulos)
-            print('alunos')
-        elif self.tabela == 'CIDADES':
-            self.cidade = Cidade(self.valores, self.condicao)
             self.Acao()
         elif self.tabela == 'ESCOLAS':
             print('ESCOLAS')
@@ -45,13 +42,5 @@ class controller:
             Getter.construtor(resultado)
         elif self.definidor == 'D':
             self.model.Deletar()
-        if self.definidor == 'I':
-            print("foi")
-        elif self.definidor == 'A':
-            print("foi2")
-        elif self.definidor == 'C':
-            print("foi3")
-        elif self.definidor == 'D':
-            self.cidade.get()
         else:
             print("não foi")

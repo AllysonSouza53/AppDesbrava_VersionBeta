@@ -7,3 +7,4 @@ while i != 5:
     i+=1
 controle = controller(linha)
 controle.Ordenar()
+controle.Acao()

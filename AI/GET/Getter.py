@@ -2,7 +2,6 @@ from Helpers import ManipulacaoArquivos
 
 def construtor(consulta):
     linhas = []
-    print(consulta)
     for i in consulta:
         linhas.append(','.join(map(str, i)))
     texto = '\n'.join(linhas)
