@@ -1,5 +1,7 @@
 from Models import *
+from Models.Aluno import Aluno
 from Models.Cidade import Cidade
+from AI.GET import Getter
 
 
 class controller:
@@ -13,9 +15,9 @@ class controller:
 
     def Ordenar(self):
         if self.tabela == 'ALUNOS':
-            print('alunos')
+            self.model = Aluno(self.valores, self.condicao,self.rotulos)
         elif self.tabela == 'CIDADES':
-            self.cidade = Cidade(self.valores, self.condicao)
+            self.model = Cidade(self.valores, self.condicao,self.rotulos)
             self.Acao()
         elif self.tabela == 'ESCOLAS':
             print('ESCOLAS')
@@ -31,13 +33,15 @@ class controller:
             print('nenhum')
 
     def Acao(self):
+        self.model.set()
         if self.definidor == 'I':
-            print("foi")
+            self.model.Cadastrar()
         elif self.definidor == 'A':
-            print("foi2")
+            self.model.Alterar()
         elif self.definidor == 'C':
-            print("foi3")
+            resultado = self.model.Pesquisar()
+            Getter.construtor(resultado)
         elif self.definidor == 'D':
-            self.cidade.get()
+            self.model.Deletar()
         else:
             print("não foi")

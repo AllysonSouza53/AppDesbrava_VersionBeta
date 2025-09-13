@@ -28,10 +28,7 @@ class Banco:
     def consultar(self, colunas, tabela, condicao=None):
         conexao = self.conectar()
         cursor = conexao.cursor()
-        sql = f"SELECT {colunas} FROM {tabela}"
-        if condicao:
-            sql += f" WHERE {condicao}"
-        sql += ";"
+        sql = f"SELECT {colunas} FROM {tabela} WHERE {condicao};"
         cursor.execute(sql)
         resultado = cursor.fetchall()
         cursor.close()
