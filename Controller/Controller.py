@@ -1,6 +1,7 @@
 from Models.Aluno import Aluno
 from AI.GET import Getter
 from Models.Cidade import Cidade
+from  Models.Profissional import Profissional
 
 
 class controller:
@@ -25,7 +26,7 @@ class controller:
         elif self.tabela == 'POSTS':
             print('POSTS')
         elif self.tabela == 'PROFISSIONAIS':
-            print('PROFISSIONAIS')
+            self.model = Profissional(self.valores, self.condicao,self.rotulos)
         elif self.tabela == 'PROFISSOES':
             print('PROFISSOES')
         else:

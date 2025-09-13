@@ -37,7 +37,7 @@ class Aluno(object):
     def Cadastrar(self):
         try:
             Banco.conectar()
-            Banco.inserir('ALUNOS','RE,NOME,DATANASCIMETO,NUMEROCASA,RUA,BAIRRO,IDCIDADE,CEP,SERIE,GRAU,IDESCOLA,IDPROFISSIONAL',[
+            Banco.inserir('ALUNOS','RE,NOME,DATANASCIMENTO,NUMEROCASA,RUA,BAIRRO,IDCIDADE,CEP,SERIE,GRAU,IDESCOLA,IDPROFISSIONAL',[
                 self.Registro,
                 self.Nome,
                 self.DataNascimento,
@@ -58,7 +58,7 @@ class Aluno(object):
             Banco.conectar()
             Banco.editar('ALUNOS',f"RE={self.Registro},"
                                    f"NOME='{self.Nome}',"
-                                   f"DATANASCIMETO='{self.DataNascimento}',"
+                                   f"DATANASCIMENTO='{self.DataNascimento}',"
                                    f"NUMEROCASA={self.NumeroCasa},"
                                    f"RUA='{self.Rua}',"
                                    f"BAIRRO='{self.Bairro}',"
