@@ -21,8 +21,7 @@ class Profissional(object):
         self.Rua = self.valores[9]
         self.Bairro = self.valores[10]
         cidade_nome = self.valores[11]
-        self.CEP = self.valores[12]
-        self.UF = self.valores[13]
+        self.UF = self.valores[12]
         self.ID_Cidade = DadosEndereco.get_codigo(cidade_nome, self.UF)
 
     def get(self):
@@ -39,7 +38,6 @@ class Profissional(object):
             self.Rua,
             self.Bairro,
             self.ID_Cidade,
-            self.CEP,
             self.UF
         ]
 
@@ -48,7 +46,7 @@ class Profissional(object):
             Banco.conectar()
             Banco.inserir(
                 'PROFISSIONAIS',
-                'CPF,NOME,IDPROFISSAO,DATANASCIMENTO,IDESCOLA,SENHA,BIOGRAFIA,IDFAVORITO,NUMEROCASA,RUA,BAIRRO,IDCIDADE,CEP,UF',
+                'CPF,NOME,IDPROFISSAO,DATANASCIMENTO,IDESCOLA,SENHA,BIOGRAFIA,IDFAVORITO,NUMEROCASA,RUA,BAIRRO,IDCIDADE,UF',
                 self.get()
             )
         except Exception as e:
@@ -71,7 +69,6 @@ class Profissional(object):
                 f"RUA='{self.Rua}',"
                 f"BAIRRO='{self.Bairro}',"
                 f"IDCIDADE={self.ID_Cidade},"
-                f"CEP={self.CEP},"
                 f"UF='{self.UF}'",
                 self.condicao
             )
@@ -82,11 +79,6 @@ class Profissional(object):
         try:
             Banco.conectar()
             profissional = Banco.consultar(self.rotulos, 'PROFISSIONAIS', self.condicao)
-            linhas = []
-            for i in profissional:
-                linhas.append(','.join(map(str, i)))
-            texto = '\n'.join(linhas)
-            print(texto)
             return profissional
         except Exception as e:
             print(e)
