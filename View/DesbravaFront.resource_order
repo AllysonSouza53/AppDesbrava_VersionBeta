@@ -35,6 +35,7 @@
     {"name":"Obj_FundoForms","order":2,"path":"objects/Obj_FundoForms/Obj_FundoForms.yy",},
     {"name":"Obj_FundoInicio","order":1,"path":"objects/Obj_FundoInicio/Obj_FundoInicio.yy",},
     {"name":"Obj_logo","order":3,"path":"objects/Obj_logo/Obj_logo.yy",},
+    {"name":"Obj_Menu","order":5,"path":"objects/Obj_Menu/Obj_Menu.yy",},
     {"name":"Obj_Mits","order":4,"path":"objects/Obj_Mits/Obj_Mits.yy",},
     {"name":"Obj_Rotulo","order":3,"path":"objects/Obj_Rotulo/Obj_Rotulo.yy",},
     {"name":"TelaAlunos","order":5,"path":"rooms/TelaAlunos/TelaAlunos.yy",},

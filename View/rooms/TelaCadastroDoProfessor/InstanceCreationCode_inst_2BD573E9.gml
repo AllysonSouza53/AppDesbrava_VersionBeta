@@ -8,7 +8,7 @@ clique = function()
     var trabalho = CTTrabalho.texto;
 
 	
-    /*var registro = usuario + "," + cpf + "," + senha + "," + trabalho;
+    var registro = usuario + "," + cpf + "," + senha + "," + trabalho;
 
     var existeUsuario = false;
 
@@ -71,9 +71,8 @@ clique = function()
     } else {
         EscreverArquivo(caminho, registro + ";");        // cria novo
     }
-	*/
-	global.banco = new Banco()
+	/*global.banco = new Banco()
 	global.banco.inserir("ALUNOS","RE,NOME,DATANASCIMENTO,NUMEROCASA,RUA,BAIRRO,IDCIDADE,SERIE,GRAU,IDESCOLA,IDPROFISSIONAL,UF","12345,João,2008-05-10,100,Rua A,Centro,3550308,1,3,1,1,SP")
-
+	*/
     room_goto(TelaPerfilProfessor);
 }

@@ -57,6 +57,7 @@
     {"id":{"name":"Obj_FundoForms","path":"objects/Obj_FundoForms/Obj_FundoForms.yy",},},
     {"id":{"name":"Obj_FundoInicio","path":"objects/Obj_FundoInicio/Obj_FundoInicio.yy",},},
     {"id":{"name":"Obj_logo","path":"objects/Obj_logo/Obj_logo.yy",},},
+    {"id":{"name":"Obj_Menu","path":"objects/Obj_Menu/Obj_Menu.yy",},},
     {"id":{"name":"Obj_Mits","path":"objects/Obj_Mits/Obj_Mits.yy",},},
     {"id":{"name":"Obj_Rotulo","path":"objects/Obj_Rotulo/Obj_Rotulo.yy",},},
     {"id":{"name":"TelaAlunos","path":"rooms/TelaAlunos/TelaAlunos.yy",},},
