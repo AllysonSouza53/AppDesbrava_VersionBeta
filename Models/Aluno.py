@@ -8,19 +8,18 @@ class Aluno(object):
         self.rotulos = rotulos
 
     def set(self):
-        self.Registro = self.valores[0]
+        self.Registro = int(self.valores[0])
         self.Nome = self.valores[1]
         self.DataNascimento = self.valores[2]
-        self.NumeroCasa = self.valores[3]
+        self.NumeroCasa = int(self.valores[3])
         self.Rua = self.valores[4]
         self.Bairro = self.valores[5]
-        self.UF = self.valores[12]
+        self.UF = self.valores[11]
         self.ID_Cidade = DadosEndereco.get_codigo(self.valores[6],self.UF)
-        self.CEP = self.valores[7]
-        self.Serie = self.valores[8]
-        self.Grau = self.valores[9]
-        self.ID_Escola = self.valores[10]
-        self.ID_Profissional = self.valores[11]
+        self.Serie = int(self.valores[7])
+        self.Grau = int(self.valores[8])
+        self.ID_Escola = int(self.valores[9])
+        self.ID_Profissional = int(self.valores[10])
 
     def get(self):
         return [self.Registro,
@@ -30,7 +29,6 @@ class Aluno(object):
                 self.Rua,
                 self.Bairro,
                 self.ID_Cidade,
-                self.CEP,
                 self.Serie,
                 self.Grau,
                 self.ID_Escola,
@@ -39,8 +37,9 @@ class Aluno(object):
 
     def Cadastrar(self):
         try:
+            print(self.get())
             Banco.conectar()
-            Banco.inserir('ALUNOS','RE,NOME,DATANASCIMENTO,NUMEROCASA,RUA,BAIRRO,IDCIDADE,CEP,SERIE,GRAU,IDESCOLA,IDPROFISSIONAL,UF',
+            Banco.inserir('ALUNOS','RE,NOME,DATANASCIMENTO,NUMEROCASA,RUA,BAIRRO,IDCIDADE,SERIE,GRAU,IDESCOLA,IDPROFISSIONAL,UF',
                           self.get())
         except Exception as e:
             print(e)
@@ -55,8 +54,7 @@ class Aluno(object):
                                    f"RUA='{self.Rua}',"
                                    f"BAIRRO='{self.Bairro}',"
                                    f"IDCIDADE={self.ID_Cidade},"
-                                   f"CEP={self.CEP}"
-                                   f",SERIE={self.Serie}"
+                                   f"SERIE={self.Serie}"
                                    f",GRAU={self.Grau}"
                                    f",IDESCOLA={self.ID_Escola}"
                                    f",IDPROFISSIONAL={self.ID_Profissional},"

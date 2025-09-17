@@ -11,6 +11,7 @@
     {"name":"inst_785A5C63","path":"rooms/TelaEscolha/TelaEscolha.yy",},
     {"name":"inst_77E1F342","path":"rooms/TelaEscolha/TelaEscolha.yy",},
     {"name":"inst_41FEB764","path":"rooms/TelaEscolha/TelaEscolha.yy",},
+    {"name":"inst_4CA8ECDD","path":"rooms/TelaEscolha/TelaEscolha.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -22,6 +23,7 @@
         {"$GMRInstance":"v2","%Name":"inst_41FEB764","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_41FEB764","objectId":{"name":"Obj_botao","path":"objects/Obj_botao/Obj_botao.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Obj_botao","path":"objects/Obj_botao/Obj_botao.yy",},"propertyId":{"name":"texto_botao","path":"objects/Obj_botao/Obj_botao.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Sou Aluno",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.5,"scaleY":1.5,"x":1088.0,"y":544.0,},
+        {"$GMRInstance":"v2","%Name":"inst_4CA8ECDD","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4CA8ECDD","objectId":{"name":"Obj_botao","path":"objects/Obj_botao/Obj_botao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":192.0,},
       ],"layers":[],"name":"InstanciadeObjetos","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"InstanciaDeFundo","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_CCF2427","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_CCF2427","objectId":{"name":"Obj_fundo","path":"objects/Obj_fundo/Obj_fundo.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.9895833,"scaleY":1.0,"x":0.0,"y":0.0,},

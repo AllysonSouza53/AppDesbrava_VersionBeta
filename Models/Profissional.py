@@ -11,9 +11,8 @@ class Profissional(object):
     def set(self):
         self.CPF = self.valores[0]
         self.Nome = self.valores[1]
-        self.ID_Profissao = self.valores[2]
+        self.ID_Profissao = sum(ord(letra) for letra in self.valores[2])
         self.DataNascimento = self.valores[3]
-        self.ID_Escola = self.valores[4]
         self.Senha = self.valores[5]
         self.Biografia = self.valores[6]
         self.ID_Favorito = self.valores[7]
@@ -23,6 +22,7 @@ class Profissional(object):
         cidade_nome = self.valores[11]
         self.UF = self.valores[12]
         self.ID_Cidade = DadosEndereco.get_codigo(cidade_nome, self.UF)
+        self.ID_Escola = self.ID_Cidade + sum(ord(letra) for letra in self.valores[4])
 
     def get(self):
         return [
