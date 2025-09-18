@@ -1,4 +1,4 @@
 clique = function()
 {
-	room_goto(TelaCadastroDoProfessor);
+	room_goto(TelaCadastroDoProfessor1);
 }

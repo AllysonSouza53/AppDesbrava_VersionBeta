@@ -34,7 +34,7 @@ class Profissional(object):
             self.Senha,
             self.Biografia,
             self.ID_Favorito,
-            self.NumeroCasa,
+            int(self.NumeroCasa),
             self.Rua,
             self.Bairro,
             self.ID_Cidade,

@@ -21,4 +21,4 @@ ManipulacaoArquivos.escrever_arquivo(
 )
 """
 
-t.sleep(20)
+t.sleep(60)

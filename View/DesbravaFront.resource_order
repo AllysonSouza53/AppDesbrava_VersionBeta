@@ -39,6 +39,7 @@
     {"name":"Obj_Mits","order":4,"path":"objects/Obj_Mits/Obj_Mits.yy",},
     {"name":"Obj_Rotulo","order":3,"path":"objects/Obj_Rotulo/Obj_Rotulo.yy",},
     {"name":"TelaAlunos","order":5,"path":"rooms/TelaAlunos/TelaAlunos.yy",},
+    {"name":"TelaCadastroDoProfessor2","order":6,"path":"rooms/TelaCadastroDoProfessor2/TelaCadastroDoProfessor2.yy",},
     {"name":"TelaCarregamento","order":2,"path":"rooms/TelaCarregamento/TelaCarregamento.yy",},
     {"name":"TelaComunidade","order":4,"path":"rooms/TelaComunidade/TelaComunidade.yy",},
     {"name":"TelaEscolha","order":1,"path":"rooms/TelaEscolha/TelaEscolha.yy",},
